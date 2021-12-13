@@ -72,36 +72,38 @@ class _FiltersScreenState extends State<FiltersScreen> {
             ),
           ),
           Expanded(
-              child: ListView(
-            children: [
-              _buildSwitchListTile(
-                  'Gluten-free', 'Only include gluten-free meals.', _glutenFree,
-                  (newValue) {
-                setState(() {
-                  _glutenFree = newValue;
-                });
-              }),
-              _buildSwitchListTile('Lactose-free',
-                  'Only include lactose-free meals.', _lactoseFree, (newValue) {
-                setState(() {
-                  _lactoseFree = newValue;
-                });
-              }),
-              _buildSwitchListTile(
-                  'Vegetarian', 'Only include vegetarian meals.', _vegetarian,
-                  (newValue) {
-                setState(() {
-                  _vegetarian = newValue;
-                });
-              }),
-              _buildSwitchListTile('Vegan', 'Only include vegan meals.', _vegan,
-                  (newValue) {
-                setState(() {
-                  _vegan = newValue;
-                });
-              })
-            ],
-          ))
+            child: ListView(
+              children: [
+                _buildSwitchListTile('Gluten-free',
+                    'Only include gluten-free meals.', _glutenFree, (newValue) {
+                  setState(() {
+                    _glutenFree = newValue;
+                  });
+                }),
+                _buildSwitchListTile(
+                    'Lactose-free',
+                    'Only include lactose-free meals.',
+                    _lactoseFree, (newValue) {
+                  setState(() {
+                    _lactoseFree = newValue;
+                  });
+                }),
+                _buildSwitchListTile(
+                    'Vegetarian', 'Only include vegetarian meals.', _vegetarian,
+                    (newValue) {
+                  setState(() {
+                    _vegetarian = newValue;
+                  });
+                }),
+                _buildSwitchListTile(
+                    'Vegan', 'Only include vegan meals.', _vegan, (newValue) {
+                  setState(() {
+                    _vegan = newValue;
+                  });
+                })
+              ],
+            ),
+          )
         ],
       ),
     );
